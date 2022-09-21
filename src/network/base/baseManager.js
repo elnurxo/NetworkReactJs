@@ -6,7 +6,6 @@ export const baseManager = {
         let responseData = [];
         await axiosInstance.get(url)
             .then(res => {
-            console.log('get status is: ',res.status);
                 if (res.status === 200) {
                     responseData = res.data;
                 }
@@ -29,7 +28,6 @@ export const baseManager = {
         let response = null;
         await axiosInstance.post(url,  payload )
             .then(res => {
-            console.log('add status is: ',res.status);
                 if (res.status === 201) {
                     response = res.data;
                 }
@@ -49,7 +47,6 @@ export const baseManager = {
         let response = null;
         await axiosInstance.delete(url,id)
         .then(res=> {
-            console.log('delete status is: ',res.status);
             if (res.status===200) {
                 response = res.data;
             }
